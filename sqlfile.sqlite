@@ -4,6 +4,7 @@ CREATE TABLE employee_table(
    employee_id 		INT PRIMARY KEY     NOT NULL,
    employee_name        TEXT    NOT NULL,
    department_name 	TEXT     NOT NULL,
+   employee_age		INT	NOT NULL,
    ADDRESS        	CHAR(50),
    SALARY         	REAL
 );
