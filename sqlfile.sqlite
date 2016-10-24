@@ -4,9 +4,17 @@ CREATE TABLE employee_table(
    employee_id 		INT PRIMARY KEY     NOT NULL,
    employee_name        TEXT    NOT NULL,
    department_name 	TEXT     NOT NULL,
+   department_id	INT	NOT NULL,
    employee_age		INT	NOT NULL,
    ADDRESS        	CHAR(50),
-   SALARY         	REAL
+   SALARY         	REAL,
+   FOREIGN KEY(department_id) REFERENCES department_table(department_id)
+);
+
+CREATE TABLE employee_table(
+   department_id 	INT PRIMARY KEY     NOT NULL,
+   department_name	TEXT NOT NULL
+   
 );
 
 
