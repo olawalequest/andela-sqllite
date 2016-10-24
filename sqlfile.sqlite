@@ -1,20 +1,27 @@
 sqlite3 andela_sql.db
 
 CREATE TABLE employee_table(
-   employee_id 		INT PRIMARY KEY     NOT NULL,
-   employee_name        TEXT    NOT NULL,
+   employee_id 	INT PRIMARY KEY NOT NULL,
+   employee_name   TEXT    NOT NULL,
    department_name 	TEXT     NOT NULL,
    department_id	INT	NOT NULL,
-   employee_age		INT	NOT NULL,
+   employee_age	 INT	NOT NULL,
    ADDRESS        	CHAR(50),
    SALARY         	REAL,
    FOREIGN KEY(department_id) REFERENCES department_table(department_id)
 );
 
-CREATE TABLE employee_table(
-   department_id 	INT PRIMARY KEY     NOT NULL,
-   department_name	TEXT NOT NULL
+CREATE TABLE department_table3(
+   department_id 	INT 	PRIMARY KEY     NOT NULL,
+   department_name	TEXT 	NOT NULL
    
 );
 
-
+INSERT INTO department_table3 (department_id, department_name)
+VALUES (1, 'HR');
+INSERT INTO department_table3 (department_id, department_name)
+VALUES (2, 'IT');
+INSERT INTO department_table3 (department_id, department_name)
+VALUES (3, 'Adminstrative');
+INSERT INTO department_table3 (department_id, department_name)
+VALUES (4, 'Intern');
